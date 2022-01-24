@@ -1,0 +1,56 @@
+DAY 1-
+Task 1 - Prasad
+  -Login and Registration
+  -Screens
+   -Login- Username, password
+   -Registration- Username, emailId , mobileno, password, name 
+  -Validations - unique username and all fields mandatory.
+
+Task 2- Manoj
+  -Use SQL querries to search for categories and items.
+  -Screens
+   -Search- category, Name
+  -Validation- no empty fields
+
+Task 3- Dhanshree
+  -Display searched products and also an option to select and deselct the items from list.
+  -Use of TSQ
+
+Task 4- Raviteja
+  -Display products selected by the user(wants to buy)
+  -Addition and deletion option
+
+Task 5 - Rahul
+  -purchase
+  -Screen- before confirmation- Total amount, User name, Confirmation(Y/N) 
+         - after confirmation- transaction no, order placed successfully, total amount and user name
+Task 6- Abhijit
+  -Read the succefull transaction and write in seperate file.
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+No of tables- 4
+ 1. Customer - Username(primarykey) varchar(10), Name char(20), EmailID varchar(20), MobileNo numeric(10), Password varchar(6).
+ 2. Product-Prod_ID varchar(5)(primary key), Prod_category char(10), Name char(20), total_qty numeric(3), Price decimal(5,2). 
+ 3. Cart-  Prod_ID varchar(5)(primary key), Prod_category char(10), Name char(20), total_qty numeric(3), Price decimal(5,2).  
+     
+ 4. Transaction- TransactionID varchar(05)(primarykeY), transactionDate DATE, Totalamount decimal(5,2).
+
+------------------------------------------------------
+
+EXEC SQL 
+    SELECT SUM(PRICE) INTO :CR-PRICE
+    FROM T157501.CART
+END EXEC.
+
+
+------------------------------------------------------------------------------------------------------------------------
+1.T157615==============> create all the tables
+2.table name ==>T157615.CART;====> in all modules of app
+3.GRANT ALL ON TABLE LOGIN,PRODUCTS,CART,TRANSACTION TO T157611,T517612;
+4.GRANT BIND,EXECUTE ON PLAN PLN257 TO T157615;
+
+
+
+
