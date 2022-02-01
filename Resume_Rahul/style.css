@@ -1,83 +1,142 @@
-html{
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: wheat;
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Neonderthaw&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quintessential&display=swap');
+.container{
+    display: flex;
+
 }
 
-header {
-    background-color: lightblue;
-    border: red solid;
+.sidebar{
+    background-color: rgb(224, 214, 214);
+    font-size: 30px;
+    font-family: 'Source Sans Pro',sans-serif;
+    font-weight: 300;
+    padding: 15px;
     display:flex;
+    flex-direction: column;
     justify-content: space-between;
-    margin: 1rem;
-    padding-left: 10px;
+    transition: transform 0.3s ease-in;
 }
 
+.profilePhoto{
+    width: 250px;
+    border-radius: 130px;  
+    justify-content: flex-start;
+  
+}
 
-header h1{
-    font-size:xx-large;
+.main{
+    margin: 10px;
+    width: 80vw;
+    font-family: 'Source Sans Pro',sans-serif;
+    font-weight: 200;
+    
+}
+
+.subMain{
+    margin-top: 100px;
+    margin-left: 30px;
+    padding: 20px;
+    color:rgb(1, 6, 36);
+}
+
+li{
+    
+    list-style: none;
+    margin: 2rem;
+}
+li a{
+    text-decoration: none;
+}
+
+.hello{
+    font-family: 'Neonderthaw', cursive;
+}
+.name{
+    font-family: 'Quintessential', cursive;
+    margin-left: 1rem;
     font-weight: 900;
-    text-decoration: underline;
+}
+.designation{
+    font-family: 'Quintessential', cursive;
+    margin-left: 1rem;
+    margin-top: -10px;
+}
+.para{
+    margin-left: 1rem;
+}
+button{
+    margin: 5px;
+    padding: 8px;
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: blue;
+    color: white;
+}
+button:hover{
+    background-color: white;
+    color: blue;
+}
+
+.form-attribute{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+    font-weight: bold;
 }
 
 
-header h3{
+form{  
+    padding-left: 20px;
+    font-weight: bold;
+}
+.form-text{
+    font-size: small;
+    font-weight: lighter;
+    color: midnightblue;
+}
+
+.contactForm h1{
+    padding-left: 20px;
+    font-weight: 900;  
+}
+.contactForm{
+    display: flex;
+    flex-direction: column;
+    margin-top: -90px;
+}
+.form-control{
+    width: 30vw;
+    border-radius: 8px;
+    margin-top: 6px;
+    padding: 3px;
+}
+
+.sidebarGO{
+    transform: translate(-350px, 0px);
+    position: absolute;
+}   
+
+@media (max-width: 1000px){
+
+.sidebar{
+    transform: translate(-350px, 0px);
+    position: absolute;
+}    
+}
+
+.cross{
+    width: 20px;
+    margin-left: 230px;
+    cursor: pointer;
+}
+
+.ham{
+    width: 20px;
+    cursor: pointer;
+}
+.crossHam{
     display: flex;
     justify-content: space-between;
-    font-size: 15px;
-}
-
-.image1{
-    width: 20px;
-}
-.image2{
-    width: 40px;
-}
-
-.image3{
-    width: 250px;
-    border-radius:50%;
-    border:rgb(192, 25, 25) solid;
-    margin: 4px;
-}
-
-article{
-    margin: 0rem 2rem;
-}
-
-.bio{
-    background-color: lightpink;
-    border: rgb(192, 15, 15) solid;
-    padding: 0.5rem;
-    margin: 0.5rem;
-}
-
-.skills{
-    background-color:lightgreen ;
-    border: red solid;
-    padding: 0.5rem;
-    margin: 0.5rem;
-}
-.experience{
-    background-color: lightskyblue ;
-    border: red solid;
-    padding: 0.5rem;
-    margin: 0.5rem;
-}
-.projects{
-    background-color: lightslategrey;
-    border: red solid;
-    padding: 0.5rem;
-    margin: 0.5rem;
-}
-.academics{
-    background-color:lightsalmon ;
-    border: red solid;
-    padding: 0.5rem;
-    margin: 0.5rem;
-}
-.cocurr{
-    background-color:lightcoral ;
-    border: red solid;
-    padding: 0.5rem;
-    margin: 0.5rem;
 }
