@@ -13,3 +13,23 @@ let arr = [2,5,9,8,15,11,6]
 let square = arr.map(function squarer(v){
     return v*v
 })
+
+
+//**************************************** */
+
+let nameArr = ['Rahul', 'Anand', 'Sunny']
+
+let printName = nameArr.map(function print(n){
+    return n ;
+})
+//console.log(printName)
+
+//Example Question
+const transactions = [1000, 3000, 4000, 2000, -898, 3800, -4500];
+const inrtToUsd = 74;
+
+let rupees = transactions.map(function(n){
+    return n*inrtToUsd;
+})
+
+console.log(rupees)
