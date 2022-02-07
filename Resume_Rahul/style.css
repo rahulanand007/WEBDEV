@@ -8,6 +8,7 @@
 }
 
 .sidebar{
+    position: absolute;
     background-color: rgb(224, 214, 214);
     font-size: 30px;
     font-family: 'Source Sans Pro',sans-serif;
@@ -104,7 +105,8 @@ form{
 .contactForm{
     display: flex;
     flex-direction: column;
-    margin-top: -90px;
+
+    padding-left: 4rem;
 }
 .form-control{
     width: 30vw;
@@ -120,10 +122,10 @@ form{
 
 @media (max-width: 1000px){
 
-.sidebar{
+/* .sidebar{
     transform: translate(-350px, 0px);
     position: absolute;
-}    
+}     */
 }
 
 .cross{
