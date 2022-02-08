@@ -9,7 +9,7 @@
 
 .sidebar{
     position: absolute;
-    background-color: rgb(224, 214, 214);
+    background-color: white;
     font-size: 30px;
     font-family: 'Source Sans Pro',sans-serif;
     font-weight: 300;
@@ -23,8 +23,8 @@
 .profilePhoto{
     width: 250px;
     border-radius: 130px;  
-    justify-content: flex-start;
-  
+    justify-content: flex-start; 
+    margin-bottom: 20px;
 }
 
 .main{
@@ -38,8 +38,9 @@
 .subMain{
     margin-top: 100px;
     margin-left: 30px;
+    margin-right: 6rem;
     padding: 20px;
-    color:rgb(1, 6, 36);
+    color:whitesmoke;
 }
 
 li{
@@ -49,6 +50,9 @@ li{
 }
 li a{
     text-decoration: none;
+    color: black;
+    font-weight: 900;
+    
 }
 
 .hello{
@@ -91,11 +95,12 @@ button:hover{
 form{  
     padding-left: 20px;
     font-weight: bold;
+    
 }
 .form-text{
     font-size: small;
     font-weight: lighter;
-    color: midnightblue;
+    color: white;
 }
 
 .contactForm h1{
@@ -105,7 +110,7 @@ form{
 .contactForm{
     display: flex;
     flex-direction: column;
-
+    color: white;
     padding-left: 4rem;
 }
 .form-control{
@@ -132,13 +137,25 @@ form{
     width: 20px;
     margin-left: 230px;
     cursor: pointer;
+    
 }
 
 .ham{
-    width: 20px;
+    width: 2.5rem;
     cursor: pointer;
+    
 }
 .crossHam{
     display: flex;
     justify-content: space-between;
+}
+
+body{
+    background-image: url(./141516.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.sidebar nav{
+    border-top: 2px solid black;
 }
