@@ -43,7 +43,7 @@
     color:whitesmoke;
 }
 
-li{
+.container li{
     
     list-style: none;
     margin: 2rem;
@@ -131,6 +131,10 @@ form{
     transform: translate(-350px, 0px);
     position: absolute;
 }     */
+.subMain{
+    margin-right: -100px;
+    margin-left: -15px
+}
 }
 
 .cross{
@@ -158,4 +162,39 @@ body{
 
 .sidebar nav{
     border-top: 2px solid black;
+}
+
+.intro .subMain{
+    margin-top: 0;
+    font-family: 'Source Sans Pro',sans-serif;
+    
+}
+
+.formula{
+    padding: 10px;
+    border-top: white solid;
+    border-bottom:white solid; 
+    text-align: center;
+    font-weight: 900;
+    font-size:2rem;
+}
+.heading{
+    font-family: 'Quintessential', cursive;
+    font-size: 2.5rem;
+}
+.allPara{
+    font-size: larger;
+    font-family: 'Quintessential', cursive;
+    font-weight: 100;
+}
+.insitutionImage{
+    width: 70%;
+    height: 18rem;
+    border-radius: 15px;
+    margin-left: 1rem;
+}
+
+.institutionLink{
+    text-decoration: none;
+    color: lightblue;
 }
