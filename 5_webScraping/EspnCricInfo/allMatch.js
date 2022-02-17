@@ -17,8 +17,8 @@ function extractAllLink(html){
     let $ = cheerio.load(html)
     let scoreCardArr = $('a[data-hover="Scorecard"]')
     for(let i=0; i<scoreCardArr.length;i++){
-        let link = $(scoreCardArr[i]).attr('href')
-        fullLink = 'https://www.espncricinfo.com'+link
+        let  link = $(scoreCardArr[i]).attr('href')
+        let fullLink = 'https://www.espncricinfo.com'+link
         //console.log(fullLink)
         scoreCardObj.ps(fullLink)
     }
