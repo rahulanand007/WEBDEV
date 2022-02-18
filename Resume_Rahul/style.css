@@ -198,3 +198,80 @@ body{
     text-decoration: none;
     color: lightblue;
 }
+
+.skillcontainer{
+    margin-top: 0;
+}
+
+.logo{
+    width: 12px;
+    margin-left: 5px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.social{
+    text-decoration: none;
+    text-align: center;
+    color: rgb(81, 240, 226);
+}
+
+.linkedinlogo{
+    margin-left: 2px;
+}
+.quote{
+    margin-top: -20px;
+}
+
+.skills.para{
+    font-family: 'Quintessential', cursive;
+}
+
+.progressbar{
+    width: 20rem;
+    height: 1.5rem;
+    background-color: white;
+    border-radius: 20px;
+}
+.insideProgressbar{
+    width: 14rem;
+    height: 1.5rem;
+    background-color: aqua;
+    border-radius: 20px;
+}
+
+.htmlCss.insideProgressbar{
+    width: 18rem;
+}
+.mongodb.insideProgressbar{
+    width: 18rem;
+}
+.git.insideProgressbar{
+    width: 10rem;
+}
+.node.insideProgressbar{
+    width: 8rem;
+}
+
+.skillbars{
+    border-top: white solid 2px;
+    font-weight: 900;
+}
+
+footer{
+    margin-top: 6rem;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;   
+    align-items: center;    
+    background-color: white;
+    color:black;
+    height: 3rem;
+    font-size: small;
+    border-radius: 15px;
+    padding: 0.2rem;
+}
+
+.contactfooter{
+    margin: 10px 15px;
+}
