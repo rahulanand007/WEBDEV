@@ -24,30 +24,38 @@ export const TextForms = (props) => {
         e.preventDefault()
         setText('')
     }
+    const handleRemoveSpaces = (e)=>{
+        e.preventDefault()
+        let newText = text.split(/[ ]+/);
+        setText(newText.join(" "))
+    }
     const handleOnChange= (event)=>{
         setText(event.target.value)
     }
     const [text, setText] = useState("");
     return (
         <>
-        <div className="container">
+        <div className="container " style={{color: props.mode==='light'? 'black':'white'}}>
             <h1 className='my-3'>{props.heading}</h1>
             <form>
                 <div className="mb-3">
-                    <textarea type="text" className="form-control" value={text} onChange={handleOnChange} id="myBox" rows = "8"></textarea>
+                    <textarea type="text" className="form-control" value={text} style={{backgroundColor: props.mode==='light'? 'white':'grey', 
+                     color:props.mode==='light'? 'black':'white'}} onChange={handleOnChange} id="myBox" rows = "8"></textarea>
                 </div>
                 <button type="submit" className="btn btn-primary mx-1 " onClick={handleUpClick}>Change to UpperCase</button>
                 <button type="submit" className="btn btn-primary mx-1 my-1" onClick={handleLowClick}>Change to LowerCase</button>
                 <button type="submit" className="btn btn-primary mx-1 my-1" onClick={handleClearText}>Clear Text</button>
+                <button type="submit" className="btn btn-primary mx-1 my-1" onClick={handleRemoveSpaces}>Remove Extra Spaces</button>
             </form>
             <hr></hr>
         </div>
-        <div className="container my-3">
+        <div className="container my-3" style={{color: props.mode==='light'? 'black':'white'}}>
             <h2>Text Summary</h2>
             <p>{wordcounter()} words and {text.length} characters.<br></br>
                It will take approx. { 0.5 * wordcounter()} seconds({0.01 * wordcounter()} minutes) to read this.  </p>
+               <hr />
             <h3>Preview</h3>
-            <p>{text}</p>
+            <p>{text.length===0?'Enter text in above box to preview here.':text}</p>
         </div>
         </>
     )
