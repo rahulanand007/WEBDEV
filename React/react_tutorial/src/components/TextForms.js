@@ -1,6 +1,10 @@
 import React, { useState } from 'react'
 
 export const TextForms = (props) => {
+
+    const Style = {
+        fontSize: 'small'
+    }
    
     let wordcounter = ()=>{
         if(text.split(" ")[text.split(" ").length-1]===''){
@@ -14,20 +18,24 @@ export const TextForms = (props) => {
         e.preventDefault()
         let newText = text.toUpperCase();
         setText(newText)
+        props.showAlert('Text converted to Upper-case','success');
     }
     const handleLowClick = (e)=>{
         e.preventDefault()
         let newText = text.toLowerCase();
         setText(newText)
+        props.showAlert('Text converted to Lower-case','success');
     }
     const handleClearText = (e)=>{
         e.preventDefault()
         setText('')
+        props.showAlert('Text Deleted','success');
     }
     const handleRemoveSpaces = (e)=>{
         e.preventDefault()
         let newText = text.split(/[ ]+/);
         setText(newText.join(" "))
+        props.showAlert('Extra Spaces removed','success');
     }
     const handleOnChange= (event)=>{
         setText(event.target.value)
@@ -42,10 +50,10 @@ export const TextForms = (props) => {
                     <textarea type="text" className="form-control" value={text} style={{backgroundColor: props.mode==='light'? 'white':'grey', 
                      color:props.mode==='light'? 'black':'white'}} onChange={handleOnChange} id="myBox" rows = "8"></textarea>
                 </div>
-                <button type="submit" className="btn btn-primary mx-1 " onClick={handleUpClick}>Change to UpperCase</button>
-                <button type="submit" className="btn btn-primary mx-1 my-1" onClick={handleLowClick}>Change to LowerCase</button>
-                <button type="submit" className="btn btn-primary mx-1 my-1" onClick={handleClearText}>Clear Text</button>
-                <button type="submit" className="btn btn-primary mx-1 my-1" onClick={handleRemoveSpaces}>Remove Extra Spaces</button>
+                <button type="submit" className="btn btn-primary mx-1 " style={Style} onClick={handleUpClick}>Change to UpperCase</button>
+                <button type="submit" className="btn btn-primary mx-1 my-1" style={Style} onClick={handleLowClick}>Change to LowerCase</button>
+                <button type="submit" className="btn btn-primary mx-1 my-1" style={Style} onClick={handleClearText}>Clear Text</button>
+                <button type="submit" className="btn btn-primary mx-1 my-1" style={Style} onClick={handleRemoveSpaces}>Remove Extra Spaces</button>
             </form>
             <hr></hr>
         </div>
