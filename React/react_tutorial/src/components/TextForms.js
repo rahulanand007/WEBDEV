@@ -47,7 +47,7 @@ export const TextForms = (props) => {
             <h1 className='my-3'>{props.heading}</h1>
             <form>
                 <div className="mb-3">
-                    <textarea type="text" className="form-control" value={text} style={{backgroundColor: props.mode==='light'? 'white':'grey', 
+                    <textarea type="text" className="form-control" value={text} style={{backgroundColor: props.mode==='light'? 'white':'#88d5db', 
                      color:props.mode==='light'? 'black':'white'}} onChange={handleOnChange} id="myBox" rows = "8"></textarea>
                 </div>
                 <button type="submit" className="btn btn-primary mx-1 " style={Style} onClick={handleUpClick}>Change to UpperCase</button>
