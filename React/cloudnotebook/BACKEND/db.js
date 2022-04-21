@@ -1,11 +1,10 @@
 const mongoose = require('mongoose')
-const mongoURI = "mongodb://localhost:27017/cloudnotebook"
+const mongoURI ="mongodb://localhost:27017"
 
 const connectToMongo = ()=>{
-    mongoose.connect(mongoURI,()=>{
-        console.log("Mongo connected successfully");
+    mongoose.connect(mongoURI, ()=>{
+        console.log('connected to mongo successfully')
     })
 }
 
-
-module.exports = connectToMongo;
+module.exports = connectToMongo
